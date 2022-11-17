@@ -2,18 +2,26 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
 }
 
 ul {
     list-style-type: none;
 }
-
+h1{
+    font-size: 70px;
+    font-weight: bold;
+    color: rgb(117, 176, 149);
+    font-family: 'Brush Script MT', cursive;
+    letter-spacing: 10px;
+}
 body {
-    background-color: cadetblue;
+    background-color: rgb(68, 68, 68);
 }
 
 main {
-    background-color: bisque;
+    background-color: 29516D;
     padding: 10px;
     gap: 10px;
     display: grid;
@@ -25,12 +33,7 @@ main {
         "f f f";
 }
 
-header,
-nav,
-article,
-aside,
-footer,
-section {
+header, nav, article, aside, footer, section {
     /* border: 1px solid black;*/
     padding: 5px;
     gap: 10px;
@@ -65,16 +68,22 @@ nav ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 10fr;
     gap: 10px;
+    
 }
 
 nav li {
     border: 1px solid black;
     border-radius: 10%;
+    
 }
+
 
 nav a {
     text-decoration: none;
-    color: brown;
+    color: rgb(117, 176, 149);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
 }
 
 article {
@@ -83,10 +92,12 @@ article {
     grid-template-areas:
         " s s s s "
         " s s s s ";
+    color: rgb(9, 10, 59);
+    text-indent: 5px;
 }
 
 article ul {
-    background-color: azure;
+    background-color: rgb(112, 142, 164);
     border-radius: 5%;
     padding: 10px;
 }
@@ -98,13 +109,25 @@ img {
     padding: 5px;
 
 }
-
-aside {
-    background-color: azure;
-    border-radius: 5px;
-    padding: 10px;
+.kep{
+    height: 150px ;
+    overflow: hidden;
 }
 
+aside {
+    background-color: rgb(112, 142, 164);
+    border-radius: 5px;
+    padding: 10px;
+    border: 10px double rgb(3, 33, 55);
+    color: rgb(9, 10, 59);
+}
+button{
+    color: rgb(9, 10, 59);
+    background-color: rgb(120, 135, 171);
+    border-radius: 10%;
+    padding: 5px;
+    
+}
 .valtozo {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -112,27 +135,78 @@ aside {
 }
 
 .jobb {
-    text-align: right;
-
+    text-align: right;    
 }
 
 .kozep {
     text-align: center;
-    color: red;
+    color: rgb(85, 0, 0);
+    border-top: 3px solid rgb(85, 0, 0);    
 }
 
 .fizetendo {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 5px;
 }
 
 .keret {
     border: 1px solid black;
     border-radius: 10%;
-
 }
 
 /*Responsivitas*/
+@media screen and (max-width: 1300px) {
+    
+    .kep{
+        height: 130px ;
+        overflow: hidden;
+    }
+    body{
+        font-size: calc(8px + 2vw);
+    }
+    .valtozo{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 800px) {
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            " s s s "
+            " s s s "
+            " s s s ";            
+    }
+    .kep{
+        height: 120px ;
+        overflow: hidden;
+    }
+    body{
+        font-size: calc(8px + 2vw);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            " s s "
+            " s s "
+            " s s "
+            " s s ";            
+    }
+    .kep{
+        height: 150px ;
+        overflow: hidden;
+    }
+    body{
+        font-size: calc(8px + 2vw);
+    }
+}
+
 @media screen and (max-width: 600px) {
     main {
         grid-template-columns: 1fr;
@@ -141,5 +215,34 @@ aside {
             "as"
             "a"
             "f";
+    }
+}
+@media screen and (max-width: 400px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+            "as"
+            "n"
+            "a"
+            "f";
+    }
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            " s "
+            " s "
+            " s "
+            " s "
+            " s "
+            " s "
+            " s "
+            " s ";            
+    }
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr;        
+        gap: 10px;
+        text-align: center;        
     }
 }
