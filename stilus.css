@@ -3,25 +3,26 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    
+
 }
 
 ul {
     list-style-type: none;
 }
-h1{
+
+h1 {
     font-size: 70px;
     font-weight: bold;
     color: rgb(117, 176, 149);
     font-family: 'Brush Script MT', cursive;
     letter-spacing: 10px;
 }
+
 body {
     background-color: rgb(68, 68, 68);
 }
 
 main {
-    background-color: 29516D;
     padding: 10px;
     gap: 10px;
     display: grid;
@@ -33,7 +34,12 @@ main {
         "f f f";
 }
 
-header, nav, article, aside, footer, section {
+header,
+nav,
+article,
+aside,
+footer,
+section {
     /* border: 1px solid black;*/
     padding: 5px;
     gap: 10px;
@@ -68,13 +74,13 @@ nav ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 10fr;
     gap: 10px;
-    
+
 }
 
 nav li {
     border: 1px solid black;
     border-radius: 10%;
-    
+
 }
 
 
@@ -109,8 +115,9 @@ img {
     padding: 5px;
 
 }
-.kep{
-    height: 150px ;
+
+.kep {
+    height: 150px;
     overflow: hidden;
 }
 
@@ -121,13 +128,15 @@ aside {
     border: 10px double rgb(3, 33, 55);
     color: rgb(9, 10, 59);
 }
-button{
+
+button {
     color: rgb(9, 10, 59);
     background-color: rgb(120, 135, 171);
     border-radius: 10%;
     padding: 5px;
-    
+
 }
+
 .valtozo {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -135,13 +144,13 @@ button{
 }
 
 .jobb {
-    text-align: right;    
+    text-align: right;
 }
 
 .kozep {
     text-align: center;
     color: rgb(85, 0, 0);
-    border-top: 3px solid rgb(85, 0, 0);    
+    border-top: 3px solid rgb(85, 0, 0);
 }
 
 .fizetendo {
@@ -157,19 +166,22 @@ button{
 
 /*Responsivitas*/
 @media screen and (max-width: 1300px) {
-    
-    .kep{
-        height: 130px ;
+
+    .kep {
+        height: 130px;
         overflow: hidden;
     }
-    body{
+
+    body {
         font-size: calc(8px + 2vw);
     }
-    .valtozo{
+
+    .valtozo {
         display: grid;
         grid-template-columns: 1fr;
     }
 }
+
 @media screen and (max-width: 800px) {
     article {
         display: grid;
@@ -177,13 +189,15 @@ button{
         grid-template-areas:
             " s s s "
             " s s s "
-            " s s s ";            
+            " s s s ";
     }
-    .kep{
-        height: 120px ;
+
+    .kep {
+        height: 120px;
         overflow: hidden;
     }
-    body{
+
+    body {
         font-size: calc(8px + 2vw);
     }
 }
@@ -196,13 +210,15 @@ button{
             " s s "
             " s s "
             " s s "
-            " s s ";            
+            " s s ";
     }
-    .kep{
-        height: 150px ;
+
+    .kep {
+        height: 150px;
         overflow: hidden;
     }
-    body{
+
+    body {
         font-size: calc(8px + 2vw);
     }
 }
@@ -217,6 +233,7 @@ button{
             "f";
     }
 }
+
 @media screen and (max-width: 400px) {
     main {
         grid-template-columns: 1fr;
@@ -226,6 +243,7 @@ button{
             "a"
             "f";
     }
+
     article {
         display: grid;
         grid-template-columns: 1fr;
@@ -237,12 +255,13 @@ button{
             " s "
             " s "
             " s "
-            " s ";            
+            " s ";
     }
+
     nav ul {
         display: grid;
-        grid-template-columns: 1fr;        
+        grid-template-columns: 1fr;
         gap: 10px;
-        text-align: center;        
+        text-align: center;
     }
 }
